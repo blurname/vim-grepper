@@ -1019,7 +1019,7 @@ function! s:finish_up(flags)
 
   " Also open if the side mode is off and the list contains any invalid entry.
   if a:flags.open || (has_errors && !a:flags.side)
-    execute (qf ? 'botright copen' : 'lopen') (size > 10 ? 10 : size)
+    execute (qf ? 'top copen' : 'lopen') (size > 10 ? 10 : size)
     let w:quickfix_title = cmdline
     setlocal nowrap
 
